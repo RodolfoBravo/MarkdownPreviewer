@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+$darkAccent: #224b4b;
+$lightAccent: #2cda9d;
+$backgroundBase: #4b9cdf;
+
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+$default-border: 1px solid darken($backgroundBase, 35%);
+
+.colorTemplate {
+  background-color: lighten($backgroundBase, 30%);
+  border: $default-border;
+  box-shadow: $shadow;
+  border-top: none;
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0084db;
+  padding: 0.3rem;
+  font-family: Russo One;
+  font-size: 1rem;
+  color: white;
+}
+
+.headerBox i {
+    width: 25px;
+    margin-left: 5px;
+    color: white;
+  }
+
+  .minEditor {
+    max-width: 600px;
+    margin: 1.125rem auto;
+    .headerBox {
+      width: 95%;
+    }
+    textarea {
+      @extend .colorTemplate;
+      width: 95%;
+      min-height: 200px;
+      margin-bottom: -5px;
+      resize: vertical;
+      outline: none;
+      padding-left: 5px;
+      padding-top: 5px;
+      font-size: 0.875rem;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .max {
+    width: 95%;
+    min-height: 100vh;
+    textarea {
+      min-height: 95vh;
+      resize: none;
+    }
+    
+  }
+
+  .previewer {
+    width: 100px;
+    text-align: center;
+    font-size: 15rem;
+  }
+
+  .minPreview {
+    @extend .colorTemplate;
+    max-width: 850px;
+    margin: 1.25rem auto;
+    min-height: 250px;
+    overflow-wrap: break-word;
+  }
